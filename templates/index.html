@@ -1,0 +1,40 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Management System</title>
+    <!-- Link to CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Agency Management System for managing and searching agency records efficiently.">
+    <!-- Meta Keywords for SEO -->
+    <meta name="keywords" content="Agency Management, Agency Search, Agency Records, Management System">
+    <!-- Meta Author -->
+    <meta name="author" content="Your Name or Company">
+</head>
+
+<body>
+    <h1>Search Agency</h1>
+    <form action="/search" method="GET">
+        <input type="text" name="id" placeholder="Enter Agency ID">
+        <button type="submit">Search</button>
+    </form>
+
+    <h1>Add Agency</h1>
+    <form id="add-agency-form" action="/add_agency" method="POST">
+        <input type="text" name="factory_name" placeholder="Factory Name" required>
+        <input type="text" name="agent_name" placeholder="Agent Name" required>
+        <input type="text" name="workers_name" placeholder="Workers Name" required>
+        <input type="number" name="workers_in_muse" placeholder="Workers in Muse" required>
+        <input type="number" name="workers_in_china" placeholder="Workers in China" required>
+        <button type="submit">Add Agency</button>
+    </form>
+</body>
+</html>
